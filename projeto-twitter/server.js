@@ -199,7 +199,7 @@ app.post('/login', async (req, res) => {
     const db = readDB();
 
     const user = db.users.find(u =>
-        u.username === username || u.email === username
+        u.username === username || u.password === password
     );
 
     if (!user)
